@@ -1,24 +1,34 @@
-﻿namespace Converter
+﻿using System;
+using System.Linq;
+using Microsoft.Maui.Controls;
+using Converter.Services;
+using Converter.Pages;
+
+namespace Converter
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
-
         public MainPage()
         {
             InitializeComponent();
+            CategoriesView.ItemsSource = ConversionService.GetSampleCategories();
         }
 
-        private void OnCounterClicked(object? sender, EventArgs e)
+        private async void CategoriesView_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            count++;
+            var item = e.CurrentSelection.FirstOrDefault();
+            if (item == null)
+                return;
 
-            if (count == 1)
-                CounterBtn.Text = $"Clicked {count} time";
+            var category = (Models.UnitCategory)item;
+
+            // Use Shell navigation if available, otherwise push onto Navigation
+            if (Shell.Current != null)
+                await Navigation.PushAsync(new CategoryPage(category));
             else
-                CounterBtn.Text = $"Clicked {count} times";
+                await Navigation.PushAsync(new CategoryPage(category));
 
-            SemanticScreenReader.Announce(CounterBtn.Text);
+            ((CollectionView)sender).SelectedItem = null;
         }
     }
 }

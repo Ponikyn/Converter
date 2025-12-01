@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Converter.Pages.CategoryPage"
+             Title="Category">
+
+    <VerticalStackLayout Padding="20" Spacing="12">
+
+        <Label x:Name="CategoryTitle" FontSize="20" />
+
+        <HorizontalStackLayout Spacing="8" HorizontalOptions="Center">
+            <Picker x:Name="FromPicker" Title="От" WidthRequest="150"/>
+            <Button Text="?" Clicked="SwapClicked" />
+            <Picker x:Name="ToPicker" Title="В" WidthRequest="150"/>
+        </HorizontalStackLayout>
+
+        <Entry x:Name="InputEntry" Keyboard="Numeric" Placeholder="Введите значение" />
+
+        <Grid ColumnDefinitions="*,Auto" RowDefinitions="Auto">
+            <Label x:Name="ResultLabel" Text="" FontSize="18" VerticalOptions="Center" />
+            <Button Text="Очистить" Grid.Column="1" Clicked="ClearClicked" />
+        </Grid>
+
+        <Grid x:Name="PadGrid" RowSpacing="6" ColumnSpacing="6">
+            <!-- numeric keypad will be added from code-behind -->
+        </Grid>
+
+    </VerticalStackLayout>
+
+</ContentPage>
