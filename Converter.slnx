@@ -1,3 +1,5 @@
 <Solution>
-  <Project Path="Converter/Converter.csproj" />
+  <Project Path="Converter/Converter.csproj">
+    <Deploy Solution="Debug|*" />
+  </Project>
 </Solution>

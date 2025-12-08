@@ -1,35 +1,57 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Converter.Controls"
              x:Class="Converter.MainPage"
-             Title="Unit Converter">
+             BackgroundColor="#ECEFF1">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Padding="20"
-            Spacing="20">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <Style TargetType="controls:SquareButton">
+                <Setter Property="BackgroundColor" Value="#CFD8DC" />
+                <Setter Property="TextColor" Value="#263238" />
+                <Setter Property="BorderColor" Value="#B0BEC5" />
+                <Setter Property="BorderWidth" Value="1" />
+                <Setter Property="CornerRadius" Value="10" />
+                <Setter Property="FontSize" Value="18" />
+                <Setter Property="Padding" Value="0" />
+            </Style>
+        </ResourceDictionary>
+    </ContentPage.Resources>
 
-            <Label Text="Выберите величину для конвертации"
-                   FontSize="20"
-                   HorizontalOptions="Center" />
+    <Grid Padding="20" RowSpacing="10" ColumnSpacing="10">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
 
-            <CollectionView x:Name="CategoriesView"
-                            SelectionMode="Single"
-                            SelectionChanged="CategoriesView_SelectionChanged">
-                <CollectionView.ItemTemplate>
-                    <DataTemplate>
-                        <Frame Margin="5"
-                               Padding="12"
-                               CornerRadius="8"
-                               HasShadow="True">
-                            <Label Text="{Binding Name}"
-                                   FontSize="18" />
-                        </Frame>
-                    </DataTemplate>
-                </CollectionView.ItemTemplate>
-            </CollectionView>
+        <!-- Row 0 -->
+        <controls:SquareButton Text="1" Grid.Row="0" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="2" Grid.Row="0" Grid.Column="1" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="3" Grid.Row="0" Grid.Column="2" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 
-        </VerticalStackLayout>
-    </ScrollView>
+        <!-- Row 1 -->
+        <controls:SquareButton Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+        <!-- Row 2 -->
+        <controls:SquareButton Text="7" Grid.Row="2" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="8" Grid.Row="2" Grid.Column="1" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="9" Grid.Row="2" Grid.Column="2" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+        <!-- Row 3 -->
+        <controls:SquareButton Text="10" Grid.Row="3" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="11" Grid.Row="3" Grid.Column="1" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="12" Grid.Row="3" Grid.Column="2" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+
+    </Grid>
 
 </ContentPage>
