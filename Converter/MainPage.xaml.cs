@@ -33,6 +33,18 @@ namespace Converter
                         await Shell.Current.GoToAsync(nameof(TemperatureConverterPage));
                         return;
                     }
+
+                    if (string.Equals(text, "Площадь", StringComparison.OrdinalIgnoreCase))
+                    {
+                        await Shell.Current.GoToAsync(nameof(AreaConverterPage));
+                        return;
+                    }
+
+                    if (string.Equals(text, "Объем данных", StringComparison.OrdinalIgnoreCase) || string.Equals(text, "Объем данных", StringComparison.InvariantCultureIgnoreCase))
+                    {
+                        await Shell.Current.GoToAsync(nameof(DataVolumeConverterPage));
+                        return;
+                    }
                 }
 
                 // Default: open menu

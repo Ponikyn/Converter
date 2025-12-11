@@ -38,8 +38,8 @@
         <controls:SquareButton Text="Температура" Grid.Row="0" Grid.Column="2" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 
         <!-- Row 1 -->
-        <controls:SquareButton Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-        <controls:SquareButton Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="Площадь" Grid.Row="1" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="Объем данных" Grid.Row="1" Grid.Column="1" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
         <controls:SquareButton Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 
         <!-- Row 2 -->

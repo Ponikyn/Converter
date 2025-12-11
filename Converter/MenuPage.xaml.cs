@@ -24,5 +24,15 @@ namespace Converter
         {
             await Shell.Current.GoToAsync(nameof(MassConverterPage));
         }
+
+        private async void OnAreaMenuClicked(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(AreaConverterPage));
+        }
+
+        private async void OnDataVolumeMenuClicked(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(DataVolumeConverterPage));
+        }
     }
 }
