@@ -13,12 +13,27 @@ namespace Converter
         {
             try
             {
-                // Use Shell route string to navigate; ensure route is registered in AppShell
+                if (sender is Button btn)
+                {
+                    var text = btn.Text?.Trim();
+                    if (string.Equals(text, "Расстояние", StringComparison.OrdinalIgnoreCase))
+                    {
+                        await Shell.Current.GoToAsync(nameof(ConverterPage));
+                        return;
+                    }
+
+                    if (string.Equals(text, "Масса", StringComparison.OrdinalIgnoreCase))
+                    {
+                        await Shell.Current.GoToAsync(nameof(MassConverterPage));
+                        return;
+                    }
+                }
+
+                // Default: open menu
                 await Shell.Current.GoToAsync("MenuPage");
             }
             catch (Exception ex)
             {
-                // Log and show a simple alert so the app doesn't crash silently
                 System.Diagnostics.Debug.WriteLine($"Navigation error: {ex}");
                 await DisplayAlert("Error", "Не удалось открыть меню. Попробуйте ещё раз.", "OK");
             }

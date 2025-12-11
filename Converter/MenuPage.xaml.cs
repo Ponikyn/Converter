@@ -19,5 +19,10 @@ namespace Converter
         {
             await Shell.Current.GoToAsync(nameof(ConverterPage));
         }
+
+        private async void OnMassMenuClicked(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(MassConverterPage));
+        }
     }
 }
