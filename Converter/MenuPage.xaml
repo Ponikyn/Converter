@@ -13,7 +13,8 @@
 
     <StackLayout Padding="20" Spacing="20">
         <Button Text="Back" Clicked="OnBackClicked" HorizontalOptions="Start" />
-        <Label Text="This is the menu page." HorizontalOptions="Center" VerticalOptions="CenterAndExpand" />
+        <Label Text="Select an item:" FontSize="16" />
+        <Button Text="1. Расстояние" Clicked="OnConverterMenuClicked" />
     </StackLayout>
 
 </ContentPage>

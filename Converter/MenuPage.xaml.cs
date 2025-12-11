@@ -1,4 +1,5 @@
 using Microsoft.Maui.Controls;
+using System;
 
 namespace Converter
 {
@@ -9,10 +10,14 @@ namespace Converter
             InitializeComponent();
         }
 
-        private async void OnBackClicked(object? sender, System.EventArgs e)
+        private async void OnBackClicked(object? sender, EventArgs e)
         {
-            // Navigate back to the main page
             await Shell.Current.GoToAsync("..");
+        }
+
+        private async void OnConverterMenuClicked(object? sender, EventArgs e)
+        {
+            await Shell.Current.GoToAsync(nameof(ConverterPage));
         }
     }
 }

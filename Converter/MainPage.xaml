@@ -33,7 +33,7 @@
         </Grid.ColumnDefinitions>
 
         <!-- Row 0 -->
-        <controls:SquareButton Text="1" Grid.Row="0" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="Расстояние" Grid.Row="0" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
         <controls:SquareButton Text="2" Grid.Row="0" Grid.Column="1" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
         <controls:SquareButton Text="3" Grid.Row="0" Grid.Column="2" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 
