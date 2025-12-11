@@ -35,7 +35,7 @@
         <!-- Row 0 -->
         <controls:SquareButton Text="Расстояние" Grid.Row="0" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
         <controls:SquareButton Text="Масса" Grid.Row="0" Grid.Column="1" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-        <controls:SquareButton Text="3" Grid.Row="0" Grid.Column="2" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+        <controls:SquareButton Text="Температура" Grid.Row="0" Grid.Column="2" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
 
         <!-- Row 1 -->
         <controls:SquareButton Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnSquareButtonClicked" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />

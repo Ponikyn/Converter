@@ -12,6 +12,8 @@
             Routing.RegisterRoute(nameof(ConverterPage), typeof(ConverterPage));
             // Register route for MassConverterPage
             Routing.RegisterRoute(nameof(MassConverterPage), typeof(MassConverterPage));
+            // Register route for TemperatureConverterPage
+            Routing.RegisterRoute(nameof(TemperatureConverterPage), typeof(TemperatureConverterPage));
         }
     }
 }

@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:Converter.Controls"
+             x:Class="Converter.TemperatureConverterPage"
+             Title="Temperature Converter"
+             BackgroundColor="#FFFFFF">
+
+    <StackLayout Padding="20" Spacing="15">
+        <Label Text="Enter value (use buttons):" FontSize="16" />
+
+        <!-- Unit selection -->
+        <Grid ColumnSpacing="10" RowSpacing="10">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <Picker x:Name="SourceUnitPicker" Title="From unit" Grid.Column="0" />
+            <Picker x:Name="TargetUnitPicker" Title="To unit" Grid.Column="1" />
+        </Grid>
+
+        <Grid ColumnSpacing="10" RowSpacing="10">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*" />
+                <ColumnDefinition Width="Auto" />
+            </Grid.ColumnDefinitions>
+
+            <Entry x:Name="InputEntry" Grid.Row="0" Grid.Column="0" IsReadOnly="True" Text="0" />
+            <Button Text="?" Grid.Row="0" Grid.Column="1" Clicked="OnBackspaceClicked" />
+
+            <!-- Numeric keypad using SquareButton -->
+            <Grid Grid.Row="1" Grid.ColumnSpan="2">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <controls:SquareButton Text="1" Grid.Row="0" Grid.Column="0" Clicked="OnNumClicked" />
+                <controls:SquareButton Text="2" Grid.Row="0" Grid.Column="1" Clicked="OnNumClicked" />
+                <controls:SquareButton Text="3" Grid.Row="0" Grid.Column="2" Clicked="OnNumClicked" />
+
+                <controls:SquareButton Text="4" Grid.Row="1" Grid.Column="0" Clicked="OnNumClicked" />
+                <controls:SquareButton Text="5" Grid.Row="1" Grid.Column="1" Clicked="OnNumClicked" />
+                <controls:SquareButton Text="6" Grid.Row="1" Grid.Column="2" Clicked="OnNumClicked" />
+
+                <controls:SquareButton Text="7" Grid.Row="2" Grid.Column="0" Clicked="OnNumClicked" />
+                <controls:SquareButton Text="8" Grid.Row="2" Grid.Column="1" Clicked="OnNumClicked" />
+                <controls:SquareButton Text="9" Grid.Row="2" Grid.Column="2" Clicked="OnNumClicked" />
+
+                <controls:SquareButton Text="0" Grid.Row="3" Grid.Column="1" Clicked="OnNumClicked" />
+            </Grid>
+        </Grid>
+
+        <Label Text="Result:" FontSize="16" />
+        <Label x:Name="ResultLabel" Text="0" />
+
+        <Button Text="Back" Clicked="OnBackClicked" HorizontalOptions="Start" />
+
+    </StackLayout>
+
+</ContentPage>

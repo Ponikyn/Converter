@@ -27,6 +27,12 @@ namespace Converter
                         await Shell.Current.GoToAsync(nameof(MassConverterPage));
                         return;
                     }
+
+                    if (string.Equals(text, "Температура", StringComparison.OrdinalIgnoreCase))
+                    {
+                        await Shell.Current.GoToAsync(nameof(TemperatureConverterPage));
+                        return;
+                    }
                 }
 
                 // Default: open menu
