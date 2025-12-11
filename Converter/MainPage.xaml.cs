@@ -1,4 +1,6 @@
-﻿namespace Converter
+﻿using System;
+
+namespace Converter
 {
     public partial class MainPage : ContentPage
     {
@@ -7,11 +9,18 @@
             InitializeComponent();
         }
 
-        private void OnSquareButtonClicked(object? sender, EventArgs e)
+        private async void OnSquareButtonClicked(object? sender, EventArgs e)
         {
-            if (sender is Button btn)
+            try
             {
-                DisplayAlert("Button", $"You pressed {btn.Text}", "OK");
+                // Use Shell route string to navigate; ensure route is registered in AppShell
+                await Shell.Current.GoToAsync("MenuPage");
+            }
+            catch (Exception ex)
+            {
+                // Log and show a simple alert so the app doesn't crash silently
+                System.Diagnostics.Debug.WriteLine($"Navigation error: {ex}");
+                await DisplayAlert("Error", "Не удалось открыть меню. Попробуйте ещё раз.", "OK");
             }
         }
     }

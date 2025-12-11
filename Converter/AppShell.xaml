@@ -11,4 +11,11 @@
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage" />
 
+    <!-- Register MenuPage route for navigation -->
+    <ShellContent
+        Title="Menu"
+        ContentTemplate="{DataTemplate local:MenuPage}"
+        Route="MenuPage"
+        IsVisible="False" />
+
 </Shell>
